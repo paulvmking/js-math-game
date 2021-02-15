@@ -31,6 +31,18 @@ function runGame(gameType) {
 
 function checkAnswer() {
 
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculatedAnswer = calculateRightAnswer(); // calculatedAnswer is an array
+    let isCorrect = userAnswer === calculatedAnswer[0]; // isCorrect has a true or false value
+
+    if (isCorrect) {
+        alert("Hey! You got it right :D");
+    }
+    else {
+        alert(`Awww...you answered ${userAnswer}, the correct answer was ${calculatedAnswer[0]} :(`);
+    }
+
+    runGame(calculatedAnswer[1]);
 }
 
 function calculateRightAnswer() {

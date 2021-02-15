@@ -26,7 +26,6 @@ function runGame(gameType) {
     }
 
 }
-}
 
 // Called when the user clicks the Submit button or presses Enter
 
